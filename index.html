@@ -1,1 +1,176 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Morgan Martin</title>
+    <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.js"></script>
+  </head>
+  <body>
+
+    <div class="header">Morgan Martin</div>
+     <script>
+        $(document).ready(function() {
+          $(".header").lettering();
+        });
+      
+    </script>
+
+    <div class="menu">
+
+      <div class="menu-item">
+      <div class="circle-icon github">
+      <a href="https://github.com/Styx-" target="_blank">Github</a></div></div>
+
+      <div class="menu-item">
+      <div class="circle-icon twitter">
+      <a href="https://twitter.com/morganm5201" target="_blank">Twitter</a></div></div>
+
+      <div class="menu-item">
+      <div class="circle-icon projects">
+      Projects</div></div>
+
+      <div class="menu-item" >
+      <div class="circle-icon blog">
+      <a href="https://devintraining.wordpress.com/" target="_blank">Blog</a></div></div>
+
+
+    </div>
+
+
+    <div class="chess-header">
+      Interactive Chess
+    </div>
+
+    <div class="chess-info">
+      I created this chess board after finishing a command-line version of it and deciding that I wanted to actually <span class="italic">see</span> the board. The logic was originally written in Ruby, but I used a tool called Opal to convert my code into Javascript. From there it was just a matter of adding some html/css. Check out its repository over on my <span class="info-link"><a href="https://github.com/Styx-/interactive_chess" target="blank_">github.</a></span>
+    </div>
+
+
+
+    <!--Chess Board-->
+
+    <div class="container">
+
+      <div class="row">
+        <div class="cell clear-cell ">8</div>
+        <div class="cell white-cell"><div class="piece" id="a8"></div></div>
+        <div class="cell black-cell"><div class="piece" id="b8"></div></div>
+        <div class="cell white-cell"><div class="piece" id="c8"></div></div>
+        <div class="cell black-cell"><div class="piece" id="d8"></div></div>
+        <div class="cell white-cell"><div class="piece" id="e8"></div></div>
+        <div class="cell black-cell"><div class="piece" id="f8"></div></div>
+        <div class="cell white-cell"><div class="piece" id="g8"></div></div>
+        <div class="cell black-cell"><div class="piece" id="h8"></div></div>
+      </div>
+
+      <div class="row">
+        <div class="cell clear-cell">7</div>
+        <div class="cell black-cell"><div class="piece" id="a7"></div></div>
+        <div class="cell white-cell"><div class="piece" id="b7"></div></div>
+        <div class="cell black-cell"><div class="piece" id="c7"></div></div>
+        <div class="cell white-cell"><div class="piece" id="d7"></div></div>
+        <div class="cell black-cell"><div class="piece" id="e7"></div></div>
+        <div class="cell white-cell"><div class="piece" id="f7"></div></div>
+        <div class="cell black-cell"><div class="piece" id="g7"></div></div>
+        <div class="cell white-cell"><div class="piece" id="h7"></div></div>
+      </div>
+
+      <div class="row">
+        <div class="cell clear-cell">6</div>
+        <div class="cell white-cell"><div class="piece" id="a6"></div></div>
+        <div class="cell black-cell"><div class="piece" id="b6"></div></div>
+        <div class="cell white-cell"><div class="piece" id="c6"></div></div>
+        <div class="cell black-cell"><div class="piece" id="d6"></div></div>
+        <div class="cell white-cell"><div class="piece" id="e6"></div></div>
+        <div class="cell black-cell"><div class="piece" id="f6"></div></div>
+        <div class="cell white-cell"><div class="piece" id="g6"></div></div>
+        <div class="cell black-cell"><div class="piece" id="h6"></div></div>
+      </div>
+
+      <div class="row">
+        <div class="cell clear-cell">5</div>
+        <div class="cell black-cell"><div class="piece" id="a5"></div></div>
+        <div class="cell white-cell"><div class="piece" id="b5"></div></div>
+        <div class="cell black-cell"><div class="piece" id="c5"></div></div>
+        <div class="cell white-cell"><div class="piece" id="d5"></div></div>
+        <div class="cell black-cell"><div class="piece" id="e5"></div></div>
+        <div class="cell white-cell"><div class="piece" id="f5"></div></div>
+        <div class="cell black-cell"><div class="piece" id="g5"></div></div>
+        <div class="cell white-cell"><div class="piece" id="h5"></div></div>
+      </div>
+
+      <div class="row">
+        <div class="cell clear-cell">4</div>
+        <div class="cell white-cell"><div class="piece" id="a4"></div></div>
+        <div class="cell black-cell"><div class="piece" id="b4"></div></div>
+        <div class="cell white-cell"><div class="piece" id="c4"></div></div>
+        <div class="cell black-cell"><div class="piece" id="d4"></div></div>
+        <div class="cell white-cell"><div class="piece" id="e4"></div></div>
+        <div class="cell black-cell"><div class="piece" id="f4"></div></div>
+        <div class="cell white-cell"><div class="piece" id="g4"></div></div>
+        <div class="cell black-cell"><div class="piece" id="h4"></div></div>
+      </div>
+
+      <div class="row">
+        <div class="cell clear-cell">3</div>
+        <div class="cell black-cell"><div class="piece" id="a3"></div></div>
+        <div class="cell white-cell"><div class="piece" id="b3"></div></div>
+        <div class="cell black-cell"><div class="piece" id="c3"></div></div>
+        <div class="cell white-cell"><div class="piece" id="d3"></div></div>
+        <div class="cell black-cell"><div class="piece" id="e3"></div></div>
+        <div class="cell white-cell"><div class="piece" id="f3"></div></div>
+        <div class="cell black-cell"><div class="piece" id="g3"></div></div>
+        <div class="cell white-cell"><div class="piece" id="h3"></div></div>
+      </div>
+
+      <div class="row">
+        <div class="cell clear-cell">2</div>
+        <div class="cell white-cell"><div class="piece" id="a2"></div></div>
+        <div class="cell black-cell"><div class="piece" id="b2"></div></div>
+        <div class="cell white-cell"><div class="piece" id="c2"></div></div>
+        <div class="cell black-cell"><div class="piece" id="d2"></div></div>
+        <div class="cell white-cell"><div class="piece" id="e2"></div></div>
+        <div class="cell black-cell"><div class="piece" id="f2"></div></div>
+        <div class="cell white-cell"><div class="piece" id="g2"></div></div>
+        <div class="cell black-cell"><div class="piece" id="h2"></div></div>
+      </div>
+
+      <div class="row">
+        <div class="cell clear-cell">1</div>
+        <div class="cell black-cell"><div class="piece" id="a1"></div></div>
+        <div class="cell white-cell"><div class="piece" id="b1"></div></div>
+        <div class="cell black-cell"><div class="piece" id="c1"></div></div>
+        <div class="cell white-cell"><div class="piece" id="d1"></div></div>
+        <div class="cell black-cell"><div class="piece" id="e1"></div></div>
+        <div class="cell white-cell"><div class="piece" id="f1"></div></div>
+        <div class="cell black-cell"><div class="piece" id="g1"></div></div>
+        <div class="cell white-cell"><div class="piece" id="h1"></div></div>
+      </div>
+    
+
+      <div class="row">
+        <div class="cell clear-cell"></div>
+        <div class="cell clear-cell">A</div>
+        <div class="cell clear-cell">B</div>
+        <div class="cell clear-cell">C</div>
+        <div class="cell clear-cell">D</div>
+        <div class="cell clear-cell">E</div>
+        <div class="cell clear-cell">F</div>
+        <div class="cell clear-cell">G</div>
+        <div class="cell clear-cell">H</div>
+      </div>
+    </div>
+
+    <div class="black tail"></div>
+
+
+
+
+
+    <script src="jquery.lettering-0.6.1.min.js"></script>
+    <script src="main.js"></script>
+
+
+  </body>
+</html>

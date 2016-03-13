@@ -1,0 +1,206 @@
+div{
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #443D3D;
+
+}
+
+body{
+  background-image: url('trianglify.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a, a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
+.header{
+  width: 50%;
+  margin: 150px auto;
+  text-align: center;
+  font-size: 80px;
+  opacity: 0.625;
+}
+
+.menu {
+  width: 80%;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.menu-item{
+  display: inline-block;
+  width: 24%;
+}
+
+.circle-icon{
+  border-radius: 50%;
+  width: 55%;
+  margin: auto;
+  background-color: none;
+  font-size: 50px;
+  opacity: 0.625;
+  transition: background 0.5s, color 0.5s, opacity 0.5s linear;
+}
+
+.circle-icon:hover{
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+}
+
+.header:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+.header:hover .char1,
+.header:hover .char5,
+.header:hover .char10{
+  color: #5BA641;
+  transition: color 0.5s linear;
+}
+
+.header:hover .char2,
+.header:hover .char6,
+.header:hover .char11{
+  color: #5EA9DD;
+  transition: color 0.5s linear;
+}
+
+.header:hover .char3,
+.header:hover .char8,
+.header:hover .char12{
+  color: #D84A38;
+  transition: color 0.5s linear;
+}
+
+.header:hover .char4,
+.header:hover .char9,
+.header:hover .char13{
+  color: #FFCC22;
+  transition: color 0.5s linear;
+}
+
+.github:hover{
+  color: #5BA641;
+  transition: background 0.5s, color 0.5s linear;
+}
+
+.twitter:hover{
+  color: #5EA9DD;
+  transition: background 0.5s, color 0.5s linear;
+}
+
+.projects:hover{
+  color: #D84A38;
+  transition: background 0.5s, color 0.5s linear;
+}
+
+.blog:hover{
+  color: #FFCC22;
+  transition: background 0.5s, color 0.5s linear;
+}
+
+.chess-header{
+  width: 50%;
+  margin: 80px auto;
+  text-align: center;
+  font-size: 60px;
+}
+
+.chess-info{
+  width: 80%;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.info-link{
+  text-decoration: underline;
+}
+
+
+
+/*Chess Board CSS*/
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 50%;
+  background-color: none;
+  margin: 80px auto;
+  display: block;
+  font-size: 0;
+}
+
+.row{
+  display: flex;
+}
+
+.cell {
+  background-color: none;
+  width: 11.11%;
+  cursor: pointer;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.piece {
+  width: 100%;
+  height: 75%;
+  margin: auto;
+  align-self: center;
+  font-size: 50px;
+  text-align: center;
+}
+
+.tail{
+  font-size: 50px;
+  position: absolute;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+}
+
+.clear-cell {
+  background-color: none;
+  border: none;
+  font-size: 50px;
+}
+
+.black-cell {
+  background-color: #5D1508;
+}
+
+.white-cell {
+  background-color: #E9CE84;
+}
+
+.cell:hover {
+  opacity: 0.8;
+}
+
+.clear-cell:hover{
+  cursor: auto;
+  opacity: 1;
+  font-size: ;
+}
