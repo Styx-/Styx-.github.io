@@ -8,6 +8,8 @@ body{
   background-image: url('trianglify.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
 a, a:visited{
