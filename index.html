@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="main.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.js"></script>
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico"/>
   </head>
   <body>
 
@@ -32,7 +33,7 @@
 
       <div class="menu-item" >
       <div class="circle-icon blog">
-      <a href="https://devintraining.wordpress.com/" target="_blank">Blog</a></div></div>
+      Blog</div></div>
 
 
     </div>
@@ -44,8 +45,10 @@
 
     <div class="chess-info">
       I created this chess board after finishing a command-line version of it and deciding that I wanted to actually <span class="italic">see</span> the board. The logic was originally written in Ruby, but I used a tool called Opal to convert my code into Javascript. From there it was just a matter of adding some html/css. You can check out its repository over on my <span class="info-link"><a href="https://github.com/Styx-/interactive_chess" target="blank_">github.</a></span>
-
+        <br><br>
       Feel free to play around with the board. Piece rules have been implemented, meaning that rooks can only go in perpindicular directions while bishops are restricted to diagonals. Kings have a "reach" of 1, while queens are unlimited. Additionally, you can not make moves that put your king in check and you can not leave your king in check. As of now, there is no computer AI to play against, but I'm considering it for a future project!
+      <br><br>
+      Just click a piece to select it, then click an allowed space to place it.
     </div>
 
 
@@ -167,7 +170,297 @@
     <div class="black tail"></div>
 
 
+      <!--Blog Posts-->
 
+    <div class="posts-container">
+
+      <div class="post">
+
+        <h1>My Personal Webpage</h1>
+        <br>
+        <div class="post-date">Posted on March 15, 2016</div>
+
+        <p>So I'm glad to say that I've been pretty productive since I last posted! After finishing up with my Chess program, I started thinking about what my next project should be. I was pretty sure that I wanted to create my own, personal webpage/portfolio site, but it's hard to have a portfolio with nothing in it! My chess program was still fresh in my mind, and I considered going through the trouble of creating some sort of on-page terminal to access it (since it's a CLI program) but that seemed like less than an ideal solution. This all led me to consider creating an actual, visible, on-page chess game. I didn't really have a clear idea of how it would best be done, but I was fairly confident that all of the (what I assumed to be appropriate) tools were within my reach.</p>
+
+        <p>For instance, I knew that to do pretty much anything interactive in the browser I would have to use Javascript, which I'd dabbled (a miniscule amount) in before. I've been working in html/css a lot recently and I knew that I could accomplish the looks with them. That only left the logic, the brains. I already had those made, but not in the correct language. So that left me with two options. I could attempt to re-write the logic in a language (Javascript) that I didn't know, or I could try to find some way to use the Ruby code that I'd already written. I decided to look into the latter.</p>
+
+        <p>The first most obvious thought was to use Rails. I've worked with Rails a few times before, but not nearly enough to consider myself proficient. So, I decided that my most likely plan of action would be to learn more Rails and go from there. It wasn't the best plan, but I've always been the type to get a rough idea, attempt to execute and reevaluate if/when the time comes. First on the list was to learn some basic Javascript. I learned some of the most basic bits, tooled around on Codecademy and the like for a couple days before realizing that Stackoverflow was probably going to supply everything I needed for my purposes.</p>
+
+        <p>By this point, it was time to learn Rails. But another idea hit me; why not try to port the Ruby into Javascript? There are all sorts of JS frameworks/ports on the web; I don't even know Javascript and I know that! So, I googled for something along the lines of 'Ruby to Javascript compiler' and found <a href="http://opalrb.org/" target="_blank">Opal.</a> Opal is exactly that: A Ruby to JS compiler. It takes your Ruby code and converts it into a (quite massive) JS file that you can then use like any other JS file. The reason it's so large is that Opal's task isn't as small as it may seem at first. It has to convert <em>your</em> code but it also has to convert the entire Ruby language and all of the files that entails too, minus some minor things that JS and Ruby share, like strings and arrays. So the resulting JS file is just over 20,000 lines of code not counting any other JS you might write for the run-of-the-mill type stuff. Which, by the way, is pretty intimidating for someone whose biggest repository on github has maybe 15 commits! But nervousness aside, I was quite happy that I'd found a way to circumvent what otherwise would have been quite a lot of work to get the 'brains' of my program connected to the 'face'.</p>
+
+        <p>Then there was just the matter of implementation. It took me a few caffeine-fueled days to get done and I learned some new things along the way. I learned that jQuery is nicer to use and look at than plain old JS. I learned that Opal has some pretty difficult to understand documentation, thought I'm still not sure if it's the documentation or the fact that I'm a noob at programming, haha. I became even more familiar with html/css. And all sorts of other things that I can't think of off the top of my head. Suffice to say, the whole process from the ding! of idea to the actual nitty-gritty of implementation is just a little less opaque now.<p>
+
+        <p>So, after wading through a smorgasbord of bugs, I had my "Interactive Chess Board." The final product wasn't perfect, the biggest issue being that there's a slight lag when you place a piece, no doubt caused by a combination of my spaghetti code and the enormous Opal/JS file. But it worked! and that was all that mattered to me. At this point, with Chess Board in hand, it was time to create my website! If you're reading this post you've no doubt had a chance to look at it. It's nothing special, but again, it gave me the chance to refine my html/css/js skills.</p>
+
+        <p>So, here we are! I've had blinders on for the past couple of weeks while I've toiled away on my projects, but now that I'm just taking them off and looking at the fruits of my labor, I'm pretty happy! It feels <em>awesome</em> to look at something and be able to say, "I did that!" I'm probably going to take a couple days off now, but I'm already trying to come up with an idea for the next project. Can't wait!</p>
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>Chess (Revisited)</h1>
+        <br>
+        <div class="post-date">Posted on March 1, 2016</div>
+
+        <p>I've recently re-tackled the Command Line Chess project at the end of the Learn Ruby track over at <a href="http://www.theodinproject.com/ruby-programming/ruby-final-project">The Odin Project</a>. <a href="https://devintraining.wordpress.com/2015/05/19/chess/">Here's</a> the post that chronicled my first go at it in May of last year. On first glance, I thought it would be fairly straightforward, but as it turned out I underestimated the complexity of the ancient game. If memory serves (I was new to version control at the time, so no code) the checkmate? method is what derailed me. I had some weird side effects in my code that made me decide that it would probably be best if I just started back at the drawing board, but I ended up getting bored with it and moving onto something different. I'm happy to announce, however, that I've got my first working version up and running today!</p>
+
+        <p>I've yet to implement En Passant and Castling, but I've got the majority of basic functionality finished up. Which isn't to say I haven't had my fair share of problems with the little program, because I have. I've racked up a fair number of hours over the past few days to get the program to a place where I'd be happy with calling it "most of the way there." Along the way, I've started to realize why things like Test Driven Development and Object Oriented Programming exist, because I've often completely or at least partially ignored their pleas of wisdom and paid the price. Essentially I just hacked away at the program and repeatedly ran and re-ran it in my terminal until finishing up whatever method I happened to be working on. And it got the program to where it is now, but not without a couple of headaches.</p>
+
+        <p>I think my biggest problem with my first attempt at the program last year was that I hadn't much discipline with coding and often ignored some basic tenets of OOP, like maintaining methods without weird and unnatural side effects. Throwing things together haphazardly can work in the short term but it often compounds over time until your code starts to smell really bad. I've cut down on this habit enough this go around that it at least works, but I'm still not happy with the way my code looks. Frankly, it's gross looking and smells like four day old tuna surprise, so I'm going to go back and refactor in a few days time.</p>
+
+        <p>However now that I feel that I've got a handle on Ruby, I'm going to begin learning some new topics of interest. You see I've decided to learn the bare minimum to get a decent looking portfolio website up and running. So that means <a href="http://getbootstrap.com/">Bootstrap</a> for the CSS, and Javascript/jQuery for the client side functionality. I haven't got any experience with Bootstrap, but from what I've seen in a couple of introductory videos, it's fairly straightforward. As for Javascript and jQuery, I have a bare bones understanding that I'll fill out over the next few days.</p>
+
+        <p>Once I have my site up, I want to port my newly finished Chess program over, wave my magic Javascript wand and hopefully get an in-browser, drag and drop version up and running. Even though I've done a lot of the heavy-logic oriented thinking (and what I assume is the majority of the work) in this initial version of chess, I'm most excited to get it into the browser because it will be my first taste of "user-friendly" software. Once I've got it finished, it'll be accessible by anyone on the internet (thanks to Heroku) and will be simple enough to play (thanks to JS) that your grandmother could (hopefully) play it. Which is awesome, because it means I can share my work with essentially anyone, instead of bothering my brother with an ugly looking CLI chess program. :)</p>
+
+        <p>So yeah, I'm glad to be back posting on my blog. I'm *really* glad to be back coding. I've missed Ruby and even more I've missed the feeling of cramming new knowledge into my head.</p>
+
+        <p>Here's to not missing that feeling ever again.</p>
+
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>ArchLinux</h1>
+        <br>
+        <div class="post-date">Posted on June 8, 2015</div>
+
+        <p>Okay, so it's been a minute. Let me get you caught up:</p>
+
+        <p>--I postponed my chess project. I got everything working minus the FINAL method, checkmate? It's surprisingly difficult. I decided to move onto Rails. I intend to come back to this project someday and knock it out of the park</p>
+
+        <p>--So far Rails has been fun. MVC and all that.</p>
+
+        <p>--Real life got in the way and I had to switch laptops. I also got behind on coding for a few days.</p>
+
+        <p>--I decided to install Arch Linux onto my new Lenovo T420 laptop. I've never run Linux before, so Arch has definitely been a shocker for me.</p>
+
+        <p>So, if you know anything about Arch Linux, you'll know that it's about as barebones as it gets when it comes to Operating Systems. I installed it because I'd read it's a good OS for performance, and I've been thinking about making the switch to Linux for a while now. Arch was definitely like jumping into the deep end of the pool, but I feel like I've learned a lot in the past two days it's taken to set it all up.</p>
+
+        <p>Plus, I've finally pulled my development out of the cloud and onto my actual machine. Developing in the cloud was neat and it worked really well for the most part, but I certainly ran into snags here and there. While it's a neat concept and something that I think will be big in the future, I'm glad to have my development process firmly planted on the ground for now.</p>
+
+        <p>Also, I've decided to start my Hartl Rails Project over from scratch since I hadn't gotten that far into it anyway and my brain has been switched out of Rails-mode for the past few days.</p>
+
+        <p>That's about it!</p>
+
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>Chess</h1>
+        <br>
+        <div class="post-date">Posted on May 19, 2015</div>
+
+        <p>Okay, so chess isn't going to take a week. I started working on it yesterday, and despite not having much time for it today, I'm already getting pretty close. I've got my board class and piece class mostly setup and I'm beginning on my game class now, so I should have it finished tomorrow if all goes well.</p>
+
+        <p>Chess is really interesting/fun! I've made a point of not cheating off anyone else's code, so that I can be sure that I'm ready for Rails. Then again, I did install a neat gem called Colored, that just helps me color a given string in the command line. I could have done that on my own, but it looked a little tedious, plus gems are still part of the whole thing anyways, maaaaann.</p>
+
+        <p>Oh, and I also caught myself up on Git and all of it's features. It's still got a lot of mystical-seeming functionality, but I've got a much better understanding of what it's doing, and why it's important, so I'm happy with my bare-bones knowledge for now.</p>
+
+        <p>That's about it!</p>
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>Wah Wah Wah...</h1>
+        <br>
+        <div class="post-date">Posted on March 15, 2015</div>
+
+        <p>Just to catch everything up, I got an answer from a/A a few weeks ago... and no dice. They were very nice throughout the process, but I just didn't get in for whatever reason. I have my own ideas as to the reasons why, some within my control and some not. In any case, I'm still teaching myself to code, so things aren't all that bad.</p>
+
+        <p>I'm going to be doing my blog a little differently from now on. Posts may be very barebones from here on out, as I don't enjoy writing all that much. Well, that's not it exactly... I like to write, but I'm not very good at it, and I don't feel the motivation to learn how to do it well at the moment, as all of my motivation/energy is tied up in learning to become a web developer :) I'd like to become a semi-proficient writer someday, but that day is not today nor this year. Because of this, my posts may just consist of a few short paragraphs or even sentences, detailing what I learned/worked on in a given day. No more of my bright and shining personality to grace my elegant words, I'm afraid :) So, without further ado, I present to you the contents of my programming work today, all in a new format:</p>
+
+        <p>&gt;Finished Knight's Travails project. Turns out I'd made a syntax error in which I used &lt;&lt; instead of + []. This was throwing shit off big time.&gt;Looked ahead at the next lesson. Looks to be more rspec. God, I hate rspec. But, it appears that the software dev community is big on TDD, so I suppose I must learn it. Tomorrow I'll be going back to some past projects to implement some rspec tests.&gt;Looked ahead at my Ruby Course Capstone project. Looks to be chess implemented in the command line. Looks fun, but it also looks massive compared to all of my other projects so far. I feel like it'll take at least a week to finish, but then I really have no idea.</p>
+
+        <p>I'm excited about how far I've come, and even more excited that I'll be moving on to Rails fairly soon, which marks a major step in my journey to becoming a junior web developer. Things are looking good :D</p>
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>And I'm back!</h1>
+        <br>
+        <div class="post-date">Posted on April 14, 2015</div>
+
+        <p>Well, I've spent the last however long it's been going through the a/A application process, and yesterday I took the first coding interview. Unfortunately, I don't think it went very well. The problem was fairly easy, and I'd actually done it <em>multiple times </em>in the preceding weeks, but my nerves got the best of me. I was incredibly nervous throughout the entire thing, kept getting ahead of myself and the like. I took more than 20 minutes on a problem that I normally could have done in 5. This is pretty frustrating for me, as there is not much else I could have done in the way of preparing myself. Ultimately, this is what will help me get over it too. I haven't actually been rejected yet, but I feel that'll be the gist of the email I'll be receiving tomorrow.</p>
+
+        <p>But if that's what the future holds, I'm ready! I'm continuing where I left off with the Odin Project. I've got a total of 140 lessons left, and if I remember correctly, I can complete a lesson in about a day or two. So, that's between four and nine months worth of content. I think the preparation for a/A has done a lot in the way of cultivating a disciplined mindset, and in establishing a routine that works. I spend much of my time every day programming, a far cry from a couple of months ago when I did <em>no </em>coding. It feels good.</p>
+
+        <p>As far as this blog goes... I'm not sure. I get next to zero traffic, which is to be expected for a random wordpress site with little content and no advertising xD. This is essentially a glorified online journal. I suppose I'll continue updating my progress here, however sporadically, and I think I'll eventually transfer all of my articles over to a fancier domain, maybe one of those .io ones. I think github supplies them, somehow. Anyhow, that's the majority of what I wanted to get put down, so I suppose I'll get back to my regularly scheduled programming. And who knows? Maybe I'll be receiving good news tomorrow....</p>
+
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>More Rspec and Flow Control!</h1>
+        <br>
+        <div class="post-date">Posted on March 17, 2015</div>
+
+        <p>Nothing too new today. I continued working through the Test First Ruby problems and finished all except for one single stinkin' Rspec test. It's on the twelfth problem which has you construct a Reverse Polish Notation calculator. You can read up on Reverse Polish Notation <a href="http://en.wikipedia.org/wiki/Reverse_Polish_notation" target="_blank">here</a>. A quick and incomplete rundown of it is this; instead of framing a mathematical expression with the operands on either side of the operator like so, 2+2, you place your two operands then your operator like so, 22+. Crazy right? It gets crazier. You can have expressions that look like 235*/ which would evaluate in the same way as 2 / (3*5). Basically, each operator is used with the two terms before it. In this example, since 3 and 5 are the first two terms, the multiplication sign is grouped with them. Then since (3*5) can be considered one term and 2 is another, the division symbol is used for both of them. Like I said, it's pretty crazy though it does negate the need for parentheses, since the order of operations will always be obvious. Personally, I'd just as soon keep my parentheses thank-ya-very-much.</p>
+
+        <p>Anyway, I managed to create push, sum, minus, divide, times, and tokens methods for my RPNCalculator class. The implementation was fairly straightforward. The given specs had me make use of a stack, which in Ruby's case is just an array. So, I kept track of my stack which would push a given number, then when any of my operator methods were called I would check to see if @value == nil. If it did, I'd be sure to pop the last two numbers on the stack, operate on them, then set the return value = @value. And of course, if @value didn't equal nil, I would just pop the last value and operate between it and my @value instance variable. No biggie, but I didn't think ahead for other possible use cases. See, all of my specs except the last, were very simple use cases, which meant that my program didn't break. It wasn't until I began working on my evaluate method, that I realized I was in for it. The evaluate method is supposed to take a given string such as, "1 4 2 * + 3 9 / -" and RPNCalculate in order. So basically Calc.push(1), Calc.push(4) and so on, in order like that. The problem I ran into was that after I ran the first two operators, I would get a value, I would push the next two numbers to the stack, I'd run the next  operator and then my original value would be overwritten. Sure, I could hard code it to pass my final spec, but I've labored to make sure every other program was clean and concise, and I'll be damned if I give up on my last spec!</p>
+
+        <p>So I'm going to let it be for tonight, and I'll take another look at it tomorrow. I did start a new RPNCalculator from scratch to see if I could go about my flow control in a different and better way and I've got some neat ideas, but nothing working yet. Anyway, it's a neat problem and I'm glad I got to share it on my blog.</p>
+
+        <p>I've been looking at the things I want to get done before sending in my coursework and hitting the next Coding Test, and it looks like I'll be coming in right on my 10 day minimum time expenditure, which is cool. I'll probably send everything off and schedule the next test Saturday. My knowledge of Ruby is getting more extensive by the day, things are tying together nicely, and I'm really excited to take the next step towards becoming a full-fledged aA student! Thanks for reading!</p>
+
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>What I've been up to:</h1>
+        <br>
+        <div class="post-date">Posted on March 16, 2015</div>
+
+        <p>Yikes! It's been a few days, and to be honest I feel a little bad about neglecting my blog. :( I promise, I'll never do it again, my little blog. The past few days have been interesting though, today especially. I finished the required readings the day before yesterday, I think, including RubyMonk. RubyMonk was by far the most difficult read, as it kept throwing new material at me that I had yet to encounter or had little experience with and I struggled through the lessons. I tried my hand at some of the problems, but at that point I was encountering fried-brain-syndrome so I gave it a rest. Yesterday was my day off and I had a fun day with friends.</p>
+
+        <p>Today has been the most productive day though. I spent some time downloading Nitrous to my desktop, connected it to Github and setup a rails environment to go along with it. Initially, I had Ruby and Rails set up on my desktop, but I think I must have conflicting versions or something and I kept running into problems when I would try to download Gems, so I decided to go with Nitrous, as I"d been using it as my IDE anyway. I'm really happy with the setup especially since I've managed to get Rspec installed on it, and I've been able to fiddle around with it and the rest of Test-First-Ruby. All TFR really is are some exercises put together by the App Academy team that are designed to help teach Test-Driven-Development(TDD). In a nutshell, TDD means that you write your tests(or <em>specs</em>) for a given project before you ever begin writing the project itself. That way, you can go step by step whilst writing your program with the help of Rspec, which does a great job of pointing out where and why your project might be going wrong. For example, the fourth problem in TFR has you put together a Pig Latin method that takes regular english and converts it over to the horrid language that is Pig Latin. I never had much of a problem with it before, but after the ordeal I went through, I've decided it's no good :) It didn't actually take me all that long to find a solution, but my code made use of an awful looking if/elsif/else that occupied more space than ye olde back forty, so I decided to refactor. And refactor. And refactor. Something like 2 or three hours later, I had finished. Even though I kept hitting snags in my code due to stupid mistakes, overall I was pleased that I stuck with it and came out with, what looks like, a really nice solution. Of course, I'm sure that a more experienced Rubyist could have written it even more concise, but I believe that it's my most professional looking piece of code to date. It even had comments and everything!</p>
+
+        <p>After I finished up with the Pig Latin method, I started looking at some of the current cohort's blogs. It's really interesting to read the accounts of current students who are literally battling through it right now. Plus, it keeps me motivated to get to such a place. Ugh, my writing is looking pretty sloppy tonight and I'm starting to ramble, so I'm going to go. Thanks for reading, and here's to another day in the life of a Dev in Training! :D</p>
+
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>Next Round!</h1>
+        <br>
+        <div class="post-date">Posted on March 10, 2015</div>
+
+        <p>So, yesterday I got an email telling me that I'm to progress to the next round of the application process. This has been a huge relief for me, but now it's time to buckle down way harder than before. They sent me more prep work, albeit much more in depth than the first. There are required readings, and exercises that I have to turn in before I can take the next coding exercise. Because of the importance of this next coding test, I've decided that I will not take it until I've had at least 10 days to study. As today is officially my first day studying, I've resolved to not take the test until Friday, March the 20th. This may be overkill, but acceptance to this program is incredibly important to me and I want to be as prepared as I possibly can be.</p>
+
+        <p>As for the actual studying itself, I've been having fun working through Peter Cooper's Beginning Ruby today. I've learned SO much in one day. The things I know now would have allowed me to breeze through the first coding test, and I keep kicking myself for not looking through the rest of the directories on AA's Github page. *shrug* But no matter, I made it through anyway, so it's no big deal I suppose.</p>
+
+        <p>I've spent the last hour and a half trying to get the RedCloth gem to work. I think I must have a couple different versions of Ruby or Rails or something installed, because despite my best efforts I can't seem to get this particular gem to work. I don't think it's necessary anyway though, so I'm just going to come back to it later if need be.</p>
+
+        <p>All in all, I'm cautiously excited. I know that acceptance to the Academy is incredibly selective, and it probably becomes more so the longer the program goes on, but that's not going to stop me from studying my ass off for this next 10 days ;) As always, thanks for reading!</p>
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>I did it</h1>
+        <br>
+        <div class="post-date">Posted on March 7, 2015</div>
+
+        <p>I did it... I know I said I wouldn't, but I did. Should I have? I'm honestly not sure. Yes, today I went ahead with the App Academy application process and did my first coding test. I went through the prep work one last time beforehand and I was feeling confident. I'm not going to post the actual coding problems as it's against the rules, but the problems were fairly straightforward. At least, the second and third were. The first problem took the majority of my time. I did eventually figure out an answer to it, but I came in at 51 minutes and 15 seconds or so. They said it was fine to run over the 45 minute limit by 5 minutes but no more... Which is why I'm stressing. Honestly, I just want to see some sort of communication whether it be approval or rejection, as soon as possible, so that I can stop worrying about it. From what I've read on other applicant's blogs, they usually get back to you within 1-2 days, so I guess we'll see very soon.</p>
+
+        <p>That's all for today, thanks for stopping by!</p>
+
+
+      </div>
+
+      <div class="post">
+
+        <h1>How a mutation made me question reality</h1>
+        <br>
+        <div class="post-date">Posted on March 6, 2015</div>
+
+        <p>So, from what I've researched about the admissions process for AA, you really want to have your stuff down. Not only do you want to be able to complete the coding challenges, but you should be prepared to do it whiteboard style, in a timed setting. So, I've been running through the prep-work problems again today. I've gotten much faster and am very pleased with the progress I've made. Even though I was able to do them all yesterday, I still took a considerable amount of time on each problem. Due in part to the fact that I've done them already, and in part to me simply improving, my ability to logic my way through a problem has definitely improved. Plus, writing the problem down on paper definitely helps.</p>
+
+        <p>Anyway, I was working on problem thirteen which requires you to capitalize all of the words in a given string. To do it, you have to first, break the words of the string apart into individual array elements, then use the upcase method to capitalize the first letter of each array element. I was comparing my solution to the given solution and noticed something very strange. I'll see if I can finagle Wordpress' formatting and get it posted below:
+        <blockquote>def capitalize_words(string)<br>
+        words = string.split(" ")<br>
+        <br>
+        idx = 0<br>
+        while idx &lt; words.length<br>
+        word = words[idx]<br>
+<br>
+        word[0] = word[0].upcase<br>
+
+        idx += 1<br>
+        end<br>
+<br>
+        return words.join(" ")
+        end</blockquote>
+        Yeahhh, the indention's off, but hopefully you get the <em>gist. </em>Heh heh heh, erm. Anyway! Notice that the words array is never directly altered. Instead, it's altered through the string variable <em>word</em>. This was throwing me off big time, and when I ran it to make sure it worked and it did...Man, I started looking around the room to make sure I didn't see any deja-vu-black-matrix-cats running around because I was <em>confused</em>. I couldn't see how that code could possibly work. But, before I started delving through my medicine cabinet for some red pills, I decided to consult the helpful folks over at Stackoverflow. God, I love that place. You can ask the most obscure question, and someone will have gotten back to you within two seconds complete with sources and everything. But anyway, the phenomenon that I was experiencing is, evidently, referred to as mutation. The <em>word</em> string element is just a <em>reference</em> to the <em>words</em> array element. So, when you upcase the first letter of <em>word </em>it's actually effecting the <em>words[idx]</em> element. Crazy stuff, but I'm glad I stumbled across it now instead of halfway through the coding test.</p>
+
+        <p>Also, while I was studying the mutation phenomenon, I noticed a neat little thing over in the ruby doc. Apparently, you can use negative numbers to reference the <em>end</em> of a string. So, say you have string word = "imastring" and you were to say word[-4] = "b", then your result would be word = "imastbing". Not really all that useful now that I think about it, but it's neat nonetheless.</p>
+
+        <p>Anyhoo, I intend to keep on studying ruby for at least another couple of days. Perhaps longer, as I want to really have this stuff down before I take the coding test and if I'm so lucky as to make it far enough, the interview portion. Attending App Academy could potentially be life changing for me. Long gone would be the days of working dead end jobs that make the world feel bleak and dreary, and my career as a Web Developer would be up and to the races seemingly overnight. Compared to self-teaching, anyway. Of course, I'm doing my best to manage my expectations. They only admit 3-5% of applicants, so there is the very real possibility that I won't get in.</p>
+
+        <p>I'm just rambling now, so I'm going to be off. Again, thanks for reading and here's to another day on my path to becoming a full-fledged junior web developer! :)</p>
+
+      </div>
+
+      <div class="post">
+
+        <h1>App Academy</h1>
+        <br>
+        <div class="post-date">Posted on March 5, 2015</div>
+
+        <p>So, I've spent the day on App Academy. I worked through the given prep work and didn't have too much trouble with it. Even the "hard" problems were fairly easy.</p>
+
+        <p>After that, I decided to do a little more research on the competitiveness of the school. I assumed that their no-cost upfront business model would mean that competition is pretty fierce, and my assumption was correct. Apparently, only about 3-5% of applicants are accepted which is pretty intimidating. According to my research, most of which has been quora and some blogs by people that have applied before, App Academy's target demographic is technically minded people with a non-related college degree that are interested in Web Development. I don't exactly match that demographic, but I'm not too far off. I'm certainly technically oriented and although I didn't finish college, at least it was in CompSci.</p>
+
+        <p>To be quite honest, everything I've read on the admissions process has put a little fear into me. I was all psyched to do a little studying on ruby and then nail the test today, but because of what I've read, I've decided to keep studying Ruby fundamentals for at least another few days before I go ahead with the rest of the process.</p>
+
+        <p>As for The Odin Project, I'm going to suspend progress on it until I've seen this App Academy thing through. I won't be applying to any other bootcamps due to lack of funds, so if AA ends up not working out, I'll be going back to The Odin Project full time.</p>
+
+        <p>Anyhoo, thanks again for reading!</p>
+
+      </div>
+
+      <div class="post">
+
+        <h1>JQuery! And App Academy</h1>
+        <br>
+        <div class="post-date">Posted on March 4, 2015</div>
+
+        <p>Today's post is going to be shorter, I promise :)</p>
+
+        <p>So, I went through Codecademy's course on JQuery today. It was neat, I learned how to do interesting animation-type things to my html elements.</p>
+
+        <p>I'm currently learning some ruby though! "What?" you say, "But you haven't gotten to that part in TOP!" Yes well, I'm actually looking into a Coding Bootcamp called App Academy. If you don't know, a coding bootcamp is an intensive program designed to take a person from sparse coding background to a full-fledged junior web developer in about three months. The things is, most bootcamps cost exorbitant amounts of money. Like, in the thousands. And I certainly don't have that kind of money. The cool thing about App Academy is that they don't ask for any compensation up front and you're only required to pay them if you get a job. The compensation is a percentage of your first year's salary. I've actually looked into them before but I dismissed the idea because I thought that you had to pay for your own housing while at their location, but it turns out that is not necessary. I'm not totally sure about everything yet, but I'm going to take the first coding test tomorrow after I've had a little more time to study up on Ruby. Oh, and a note on Ruby: It's very similar to Javascript. I guess most coding languages are fairly similar when you're first starting out. Anyhoo, wish me luck on my coding test tomorrow!</p>
+
+      </div>
+
+      <div class="post">
+
+        <h1>Javascript is Fun. And hard...</h1>
+        <br>
+        <div class="post-date">Posted on March 3, 2015</div>
+
+        <p>So, after I finished yesterday's post, I went ahead and started on the next lesson in TOP. It tasked me to go through Codecademy's Javascript section. I did the majority of that yesterday and finished it today. Then I was tasked with some project Euler problems. Problems 1 &amp; 2 were no sweat, but 3 has been a different story. I've probably put about 2 and half hours into this problem now. Once I realized my solution was getting me nowhere, I decided to cheat and look at some other answers submitted by previous TOP students. Even THAT hasn't worked so far. My brain is so fried that I'm going to call it quits for tonight.</p>
+
+        <p>Honestly, I'm going to have to reassess my hopes of doing one assignment/project a day. I think it's a bit unrealistic, especially as I'm starting a new, more time-consuming job soon that isn't going to leave me more than 3 hours per weekday. I can see how TOP could end up taking more like 8 or 9 months instead of my previous estimation of 5 or 6. *shrug* Whatever it takes. I plan to come back to this stubborn problem tomorrow after my brain has had some time to recuperate.</p>
+
+        <p>Just to make a note of it, Javascript is very similar to what I remember Java being like when I was learning that in college. I know, I know, the two are nothing alike! you say. One's a scripting language and the other's a client-side/application language, or whatever. Well, the syntax of the two languages seem pretty similar. I suppose that's where the similarities stop. In any case, I've definitely enjoyed Javascript more than HTML/CSS so far. HTML is just so boring to me, to the point that I probably skipped it earlier than I really should have, in the hopes that I will just absorb the syntax over the course of TOP. This is probably optimistic thinking, but I digress.</p>
+
+        <p>Well, this concludes day two! I hope my struggle is proving entertaining for any of you that may be reading!</p>
+
+      </div>
+
+      <div class="post">
+        <h1>The Odin Project</h1>
+        <br>
+        <div class="post-date">Posted on March 1, 2015</div>
+
+        <p>Hi! Welcome to my blog. My name's Morgan Martin. I'm a 20 year old guy with a huge interest in computers in general and web development in particular. I've always had an interest in computers, and growing up I was always my parents' solution to whatever tech problems arose in the house. Unfortunately, I've never taken the natural next step and taught myself to program, but that all changes now.</p>
+
+        <p>So, before I get into what my plan is, let me give a little more background on myself. After high school, I did go to college for computer science. Unfortunately, after three semesters I decided that the college life wasn't for me, in part mostly to growing amounts of debt that I didn't want to have to deal with after college. So, I dropped out and decided to self-teach myself the important parts. I've spent the past couple of years working jobs that aren't fulfilling such as waiting tables, or installing carpet. Just enough to put some food in my belly. I've decided however, that it's either now or never so I've decided to get on with it and start learning Web Development.</p>
+
+        <p>I'm choosing Web Development mostly because it's the hip new thing and because there are so many great resources to learn it online. Namely, <a href="http://www.theodinproject.com/home" target="_blank">The Odin Project</a>. This is by far the best resource I've found in my years of dabbling with self-teaching programs online. I've already completed the Introduction to Web Development 101 track, which was mostly stuff I already knew. I've also worked through to the first project which requires you to create the Google homepage with your newly acquired HTML and CSS skills. It came out a little rough, and I had to borrow from some other's solutions, but it definitely pushed me to hone my skills a little more. You can see it on my Github page, <a href="https://github.com/Styx-/google-homepage" target="_blank">here.</a></p>
+
+        <p>Oh! I would be remiss if I didn't give credit for my idea to blog my WebDev journey, all of which goes to Joshua Kemp over at <a href="http://joshuakemp.blogspot.com/2013/11/how-blacksmith-learned-to-code-and-9.html" target="_blank">Confessions of an Unlikely Developer</a>. Long story short, he started out as a horseshoe-maker and after a grueling 9 months, he got a job as a Ruby WebDev. His story is truly inspirational and it's what gave me the idea to blog all of this, so you should definitely check him out if you're looking for some great advice.</p>
+
+        <p>This post is already getting pretty long, so let me sum things up really quick. Basically, I intend to do one assignment/project on TOP a day. I will also make one blog post a day detailing my progress. This process should take about 5-6 months. At that time, I'd like to start contributing to some open source projects and creating some of my own, too. Thanks for reading!</p>
+      </div>
+
+    </div>
 
 
     <script src="jquery.lettering-0.6.1.min.js"></script>

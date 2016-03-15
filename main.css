@@ -206,3 +206,38 @@ a, a:visited{
   opacity: 1;
   font-size: ;
 }
+
+.posts-container{
+  width: 50%;
+  margin: 50px auto;
+  vertical-align: center;
+}
+
+.post{
+  margin-bottom: 75px;
+  padding-bottom: 75px;
+  border-bottom: 5px solid black;
+}
+
+h1{
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 0px;
+  display: inline-flex;
+}
+
+p{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p a{
+  text-decoration: underline;
+}
+
+.post-date{
+  font-size: 18px;
+  margin-top: 0px;
+  display: inline-flex;
+}

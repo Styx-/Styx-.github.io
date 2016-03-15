@@ -6,9 +6,11 @@ $('.circle-icon').css({'line-height':ci+'px'});
 $('.chess-header').hide();
 $('.chess-info').hide();
 $('.container').fadeOut('fast');
+$('.posts-container').hide();
 
 $('.projects').click(function(e){   
   if  ( $('.container').css('display') == 'none'){
+    $('.posts-container').fadeOut('slow');
     $('.chess-header').fadeIn('slow');
     $('.chess-info').fadeIn('slow');
     $('.container').fadeIn('slow');
@@ -16,6 +18,17 @@ $('.projects').click(function(e){
     $('.chess-header').fadeOut('slow');
     $('.chess-info').fadeOut('slow');
     $('.container').fadeOut('slow');
+  };
+});
+
+$('.blog').click(function(e){   
+  if  ( $('.posts-container').css('display') == 'none'){
+    $('.posts-container').fadeIn('slow');
+    $('.chess-header').fadeOut('slow');
+    $('.chess-info').fadeOut('slow');
+    $('.container').fadeOut('slow');
+  }else{
+    $('.posts-container').fadeOut('slow');
   };
 });
 
